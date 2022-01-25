@@ -1,20 +1,43 @@
-@media only screen and (max-width: 637px) {
-    body {
-      background-color: black;
-      color: white;
+@media only screen and (max-width: 941px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section>img {
+        height: 25vw;
+    }
+
+    section>p {
+        margin-left: 0;
+        font-size: 3vw;
     }
 
     footer {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: .5em;
+        justify-content: space-evenly;
     }
 
-    a {
-        display: flex;
-        align-items: center;
-        gap: .5em;
+    a>p {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 941px) {
+    section {
+        text-align: left;
+    }
+
+    section>img {
+        height: 20vh;
+    }
+    
+    section>p {
+        margin-left: 2vw;
+        font-size: 3vh;
+    }
+
+    footer {
+        justify-content: center;
     }
 }
 
@@ -45,7 +68,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
     height: 50vh;
     width: auto;
     position: fixed;
@@ -54,11 +76,13 @@ section {
     transform: translate(-50%, -50%);
 }
 
+section>img {
+    width: auto;
+}
+
 section>p {
-    margin-left: 30px;
     font-family: Open Sans;
     font-weight: bold;
-    font-size: 3vh;
     color: #4F75E2;
     width: 32ch;
 }
@@ -66,26 +90,30 @@ section>p {
 footer {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #E8E8E8;
     box-shadow: 5px 1px 15px 3px #E8E8E8;
     position: fixed;
-    top: 95%;
-    height: 5vh;
     width: 100vw;
+    height: 5vh;
+    top: 95%;
 }
 
 a {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 1vw;
+    margin-left: 1vw;
     display: flex;
     align-items: center;
     text-decoration: none;
     justify-content: space-evenly;
 }
 
+a>img {
+    width: auto;
+    height: 2.5vh;
+}
+
 a>p {
-    margin-left: 5px;
+    margin-left: 0.5vw;
     color: #172144;
     font-family: Open Sans;
     font-weight: bold;
