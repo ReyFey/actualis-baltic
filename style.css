@@ -30,7 +30,7 @@
     section>img {
         height: 20vh;
     }
-    
+
     section>p {
         margin-left: 2vw;
         font-size: 3vh;
@@ -108,7 +108,11 @@ a {
 }
 
 a>img {
+    height: 2vh;
     width: auto;
+}
+
+.bubble {
     height: 2.5vh;
 }
 
