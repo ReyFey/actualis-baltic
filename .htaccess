@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^actualisbaltic\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.actualisbaltic\.com$
+RewriteRule ^public_html\/actualis_baltic$ "https\:\/\/www\.actualisbaltic\.com\/" [R=301,L]
