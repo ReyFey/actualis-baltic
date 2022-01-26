@@ -10,14 +10,14 @@ body {
 .header {
   background: #e8e8e8;
   box-shadow: 5px 1px 15px 3px #E8E8E8;
-  height: 74px;
+  height: $header-height;
   display: grid;
   place-items: center;
   &-img {height: 62%}
 }
 
 .main {
-  height: calc(100vh - 122px);
+  height: calc(100vh - #{$header-height + $footer-height});
   display: grid;
   place-items: center;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .footer {
-  height: 48px;
+  height: $footer-height;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
