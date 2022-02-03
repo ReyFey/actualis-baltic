@@ -1,6 +1,6 @@
 :root {
-  --header-height: 74px;
-  --footer-height: 48px;
+  --header-height: 60px;
+  --footer-height: 35px;
 }
 
 body {
@@ -29,11 +29,11 @@ body {
   flex-direction: column;
   gap: 2vw;
 }
-.maintenance-img {height: 10vw;}
+.maintenance-img {height: 25vw;}
 .maintenance-text {
   color: #4F75E2;
   text-align: center;
-  font-size: clamp(10px, 1.5vw, 48px);
+  font-size: clamp(15px, 1.5vw, 48px);
   width: 32ch;
 }
 
@@ -49,7 +49,7 @@ body {
   color: #172144;
   display: flex;
   align-items: center;
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-decoration: none;
   gap: 0.5em;
 }
@@ -57,9 +57,13 @@ body {
 .footer-link-text-icon {height: 2vh;}
 .footer-link-text-icon_bubble {height: 2.5vh;}
 
-@media only screen and (min-width: 941px) {
+@media only screen and (min-width: 800px) {
   .maintenance {flex-direction: row;}
-  .maintenance-text {text-align: left;}
+  .maintenance-img {height: 10vw;}
+  .maintenance-text {
+    text-align: left;
+    font-size: clamp(10px, 1.5vw, 48px);
+  }
 
   .footer {justify-content: center;}
   .footer-link-text {display: block;}
