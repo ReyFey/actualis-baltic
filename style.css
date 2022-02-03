@@ -54,9 +54,8 @@ nav {
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #E8E8E8;
     transform: translate(-50%, -50%);
-    box-shadow: 5px 1px 15px 3px #E8E8E8;
+    box-shadow: 5px 1px 10px 1px #E8E8E8;
 }
 
 nav>img {
@@ -90,8 +89,7 @@ section>p {
 footer {
     display: flex;
     align-items: center;
-    background-color: #E8E8E8;
-    box-shadow: 5px 1px 15px 3px #E8E8E8;
+    box-shadow: 1px 1px 12px 1px #E8E8E8;
     position: fixed;
     width: 100vw;
     height: 5vh;
