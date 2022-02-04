@@ -1,0 +1,9 @@
+:root {
+    --header-height: 60px;
+    --footer-height: 35px;
+}
+  
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}

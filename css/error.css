@@ -1,0 +1,34 @@
+.main {
+  height: calc(100vh - (var(--header-height) + var(--footer-height)));
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.content-img {height: 25vw;}
+.content-text {
+  color: #4F75E2;
+  text-align: center;
+  font-size: clamp(13px, 1.5vw, 50px);
+}
+
+.content-text-maintenance {width: 31ch;}
+.content-text-error-title {
+  font-size: clamp(24px, 1.8vw, 52px);
+  font-weight: bold;
+}
+
+.content-text-error-description {width: 38ch;}
+.footer {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
+
+@media only screen and (min-width: 941px) {
+  .content {flex-direction: row;}
+  .content-img {height: 10vw;}
+  .content-text {text-align: left;}
+}
