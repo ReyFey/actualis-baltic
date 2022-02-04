@@ -18,7 +18,6 @@
   font-size: clamp(13px, 1.5vw, 50px);
 }
 
-.content-text-maintenance {width: 31ch;}
 .content-text-error-title {
   font-size: clamp(24px, 1.8vw, 52px);
   font-weight: bold;
