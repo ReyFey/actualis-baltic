@@ -1,4 +1,18 @@
+ @font-face {
+    font-family: 'Open Sans';
+    src: 
+        url('font/OpenSans-Light.ttf') format("truetype"),
+        url('font/OpenSans-Regular.ttf') format("truetype"),
+        url('font/OpenSans-ExtraBold.ttf') format("truetype");
+}          
+
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 64px;
 }
