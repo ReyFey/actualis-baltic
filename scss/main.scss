@@ -1,0 +1,18 @@
+.main {
+    &-presentation {
+        &-title {
+            position: absolute;
+            top: calc(100vh - 70vh);
+            left: calc(100vw - 85vw);
+            color: #172144;
+            width: 8ch;
+            z-index: 100;
+        }
+        &-map {
+            position: absolute;
+            display: flex;
+            left: calc(100vw - 74vw);
+            z-index: -100;
+        }
+    }
+}
