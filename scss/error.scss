@@ -1,6 +1,9 @@
 $header-height: 60px;
 $footer-height: 35px;
 
+.header {
+  justify-content: center;
+}
 
 .main {
   height: calc(100vh - #{$header-height + $footer-height});
