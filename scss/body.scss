@@ -4,15 +4,32 @@
         url('font/OpenSans-Light.ttf') format("truetype"),
         url('font/OpenSans-Regular.ttf') format("truetype"),
         url('font/OpenSans-ExtraBold.ttf') format("truetype");
-}          
+}
 
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
+    color: #172144;
 }
 
 h1 {
     font-weight: 800;
     font-size: 64px;
+}
+
+p {
+    font-size: 15px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    width: 8vw;
+    height: 4.5vh;
+    font-size: 15px;
+    background: #6182E1;
+    border-radius: 25px;
+    border: 0;
+    color: white;
+    &:hover {background: #618FFF;}
 }
