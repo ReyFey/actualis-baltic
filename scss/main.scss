@@ -1,9 +1,12 @@
 .main {
-    overflow: hidden;
+    background-image: url('../svg/map.svg');
+    background-repeat: no-repeat;
+    background-position: 140% 0;
+    height: 100vh;
     &-presentation {
-        position: absolute;
+        position: relative;
         left: calc(100vw - 85vw);
-        top: calc(100vh - 70vh);
+        top: calc(100vh - 73vh);
         display: flex;
         gap: 2vh;
         flex-direction: column;
@@ -23,9 +26,5 @@
             width: 60ch;
         }
         &-line {z-index: 100;}
-    }
-    &-map {
-        margin-left: calc(100vw - 65vw);
-        z-index: -100;
     }
 }
