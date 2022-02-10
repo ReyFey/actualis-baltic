@@ -22,7 +22,14 @@ $footer-height: 35px;
     color: #4F75E2;
     text-align: center;
     &-maintenance {width: 31ch;}
-    &-error {&-description {width: 38ch;}}
+    &-error {
+      &-title {
+        margin: 0;
+      }
+      &-description {
+        width: 38ch;
+      }
+    }
   }
 }
 
