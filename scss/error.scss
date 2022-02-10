@@ -1,7 +1,10 @@
 $header-height: 60px;
 $footer-height: 35px;
 
-.header {justify-content: center;}
+.header {
+  position: relative;
+  justify-content: center;
+}
 
 .main {
   height: calc(100vh - #{$header-height + $footer-height});
@@ -23,12 +26,38 @@ $footer-height: 35px;
   }
 }
 
-.footer {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
+.footer {
+  height: $footer-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+  gap: 2vw;
+  &-link {
+      color: #172144;
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      font-weight: bold;
+      text-decoration: none;
+      gap: 0.5em;
+      &-text {
+          display: none;
+          &-icon {height: 2vh;}
+          &-icon_bubble {height: 2.5vh;}
+      }
+  }
+}
   
 @media only screen and (min-width: 941px) {
   .content {
     flex-direction: row;
     &-img {height: 10vw;}
     &-text {text-align: left;}
+  }
+
+  .footer {
+    justify-content: center;
+    &-link-text {display: block;}
   }
 }
