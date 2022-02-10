@@ -2,6 +2,7 @@
     background-image: url('../svg/map.svg');
     background-repeat: no-repeat;
     background-position: 140% 0;
+    overflow: hidden;
     height: 100vh;
     &-presentation {
         position: relative;
