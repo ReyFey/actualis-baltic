@@ -1,30 +1,36 @@
 .main {
-    background-image: url('../svg/map.svg');
-    background-repeat: no-repeat;
-    background-position: 140% 0;
-    overflow: hidden;
-    height: 100vh;
     &-presentation {
+        background-image: url('../svg/map.svg');
+        background-repeat: no-repeat;
+        background-position: 140% 0;
+        height: 100vh;
+        &-text {
+            position: relative;
+            left: calc(100vw - 85vw);
+            top: calc(100vh - 73vh);
+            display: flex;
+            gap: 2vh;
+            flex-direction: column;
+            align-items: flex-start;
+            &-title {
+                width: 8ch;
+                margin: 0;
+            }
+            &-quote {
+                margin: 0;
+                border-left: 2px solid #4F75E2;
+                letter-spacing: 0.2em;
+                padding-left: 1.5vw;
+                margin-left: 1vw;
+                line-height: 30px;
+                width: 60ch;
+            }
+            &-line {z-index: 100;}
+        }
+    }
+    &-test {
         position: relative;
         left: calc(100vw - 85vw);
-        top: calc(100vh - 73vh);
-        display: flex;
-        gap: 2vh;
-        flex-direction: column;
-        align-items: flex-start;
-        &-title {
-            width: 8ch;
-            margin: 0;
-        }
-        &-text {
-            margin: 0;
-            border-left: 2px solid #4F75E2;
-            letter-spacing: 0.2em;
-            padding-left: 1.5vw;
-            margin-left: 1vw;
-            line-height: 30px;
-            width: 60ch;
-        }
-        &-line {z-index: 100;}
+        top: calc(100vh - 20vh);
     }
 }
