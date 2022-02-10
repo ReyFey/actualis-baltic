@@ -1,37 +1,46 @@
- @font-face {
+@font-face {
     font-family: 'Open Sans';
-    src: url('../font/OpenSans-Regular.ttf') format("truetype");
-    font-weight: normal;
+    src: url('../font/OpenSans-ExtraBold.ttf') format("truetype");
+    font-weight: 900;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../font/OpenSans-ExtraBold.ttf') format("truetype");
-    font-weight: bold;
+    src: url('../font/OpenSans-Bold.ttf') format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-Regular.ttf') format("truetype");
+    font-weight: 500;
 }
 
 body {
     margin: 0;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
+    font-weight: 500;
     color: #172144;
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 64px;
 }
 
-p {
-    font-size: 15px;
+h2 {
+    font-size: clamp(24px, 1.8vw, 52px);
+    font-weight: 700;
 }
 
+p, blockquote, button {font-size: clamp(13px, 0.8vw, 50px);}
+
+span {font-weight: 700;}
+
 button {
-    font-family: 'Open Sans', sans-serif;
     width: 153px;
     height: 43px;
-    font-size: 15px;
     background: #6182E1;
     border-radius: 25px;
     border: 0;

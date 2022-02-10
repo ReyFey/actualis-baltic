@@ -1,9 +1,7 @@
 $header-height: 60px;
 $footer-height: 35px;
 
-.header {
-  justify-content: center;
-}
+.header {justify-content: center;}
 
 .main {
   height: calc(100vh - #{$header-height + $footer-height});
@@ -20,15 +18,8 @@ $footer-height: 35px;
   &-text {
     color: #4F75E2;
     text-align: center;
-    font-size: clamp(13px, 1.5vw, 50px);
     &-maintenance {width: 31ch;}
-    &-error {
-      &-title {
-        font-size: clamp(24px, 1.8vw, 52px);
-        font-weight: bold;
-      }
-      &-description {width: 38ch;}
-    }
+    &-error {&-description {width: 38ch;}}
   }
 }
 
