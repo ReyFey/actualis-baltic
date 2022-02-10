@@ -1,4 +1,5 @@
 .main {
+    overflow: hidden;
     &-presentation {
         position: absolute;
         left: calc(100vw - 85vw);
@@ -21,14 +22,10 @@
             line-height: 30px;
             width: 60ch;
         }
-        &-line {
-            z-index: 100;
-        }
+        &-line {z-index: 100;}
     }
     &-map {
-        position: absolute;
-        display: flex;
-        left: calc(100vw - 68vw);
+        margin-left: calc(100vw - 65vw);
         z-index: -100;
     }
 }
