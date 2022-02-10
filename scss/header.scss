@@ -10,7 +10,12 @@ $header-height: 60px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    &-img {height: 62%;}
+    &-link {
+        height: $header-height;
+        display: grid;
+        place-items: center;
+        &-img {height: 62%;}
+    }
     &-topics {
         color: #4F75E2;
         display: flex;
