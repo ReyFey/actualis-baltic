@@ -1,5 +1,5 @@
 $margin-left: 15%;
-$gap: 0.8vw;
+$gap: 1vw;
 
 .ribbon {
     background-image: url('../svg/ribbon.svg');
@@ -85,7 +85,6 @@ $gap: 0.8vw;
             &-element {
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 gap: $gap;
                 &-text {width: 45ch;}
                 &-left {
@@ -100,6 +99,7 @@ $gap: 0.8vw;
             &-leftimg {height: 10vh;}
             &-right {
                 flex-direction: column;
+                gap: 0.5vh;
                 &-elementimg {height: 7vh;}
             }
         }
