@@ -1,4 +1,11 @@
 $margin-left: 15%;
+$gap: 0.8vw;
+
+.ribbon {
+    background-image: url('../svg/ribbon.svg');
+    background-repeat: no-repeat;
+    background-position: 55% 0;
+}
 
 .main {
     &-presentation {
@@ -31,11 +38,9 @@ $margin-left: 15%;
         }
     }
     &-recruitment {
-        background-image: url('../svg/ribbon.svg');
-        background-repeat: no-repeat;
-        background-position: 55% 0;
         margin: -0.5%;
-        height: 45vh;
+        height: 40vh;
+        z-index: 50;
         &-content {
             color: white;
             display: flex;
@@ -59,7 +64,7 @@ $margin-left: 15%;
                     &-description {
                         display: flex;
                         align-items: center;
-                        gap: 0.8vw;
+                        gap: $gap;
                         &-text {
                             margin: 0;
                             width: 35ch;
@@ -68,5 +73,36 @@ $margin-left: 15%;
                 }
             }
         }
+    }
+    &-training {
+        color: #4F75E2;
+        padding: 2% $margin-left;
+        z-index: -50;
+        &-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &-element {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: $gap;
+                &-text {width: 45ch;}
+                &-left {
+                    padding-right: 8%;
+                    border-right: 2px solid black;
+                    &-bot {border-right: 2px solid #4F75E2;}
+                }
+            }
+        }
+        &-top {
+            color: #172144;
+            &-leftimg {height: 10vh;}
+            &-right {
+                flex-direction: column;
+                &-elementimg {height: 7vh;}
+            }
+        }
+        &-botimg {height: 8vh;}
     }
 }
