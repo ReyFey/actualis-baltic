@@ -5,9 +5,17 @@ $gap: 1vw;
     background-image: url('../svg/ribbon.svg');
     background-repeat: no-repeat;
     background-position: 55% 0;
+    height: 58vh;
     margin: -0.5%;
-    height: 40vh;
     z-index: 50;
+    &-content {
+        color: white;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2% $margin-left;
+    }
 }
 
 .main {
@@ -41,11 +49,6 @@ $gap: 1vw;
         }
     }
     &-recruitment {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2% $margin-left;
         &-title {margin: 0;}
         &-top {
             display: flex;
