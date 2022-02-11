@@ -5,6 +5,9 @@ $gap: 1vw;
     background-image: url('../svg/ribbon.svg');
     background-repeat: no-repeat;
     background-position: 55% 0;
+    margin: -0.5%;
+    height: 40vh;
+    z-index: 50;
 }
 
 .main {
@@ -38,37 +41,32 @@ $gap: 1vw;
         }
     }
     &-recruitment {
-        margin: -0.5%;
-        height: 40vh;
-        z-index: 50;
-        &-content {
-            color: white;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2% $margin-left;
+        &-title {margin: 0;}
+        &-top {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            padding: 2% $margin-left;
-            &-title {margin: 0;}
-            &-top {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.5vw;
-                &-img {height: 8vh;}
-                &-text {width: 53ch;}
-            }
-            &-sections {
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                &-section {
-                    &-description {
-                        display: flex;
-                        align-items: center;
-                        gap: $gap;
-                        &-text {
-                            margin: 0;
-                            width: 35ch;
-                        }
+            align-items: center;
+            gap: 0.5vw;
+            &-img {height: 8vh;}
+            &-text {width: 53ch;}
+        }
+        &-sections {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            &-section {
+                &-description {
+                    display: flex;
+                    align-items: center;
+                    gap: $gap;
+                    &-text {
+                        margin: 0;
+                        width: 35ch;
                     }
                 }
             }
