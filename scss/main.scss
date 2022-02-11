@@ -2,12 +2,12 @@
     &-presentation {
         background-image: url('../svg/map.svg');
         background-repeat: no-repeat;
-        background-position: 140% 0;
+        background-position: 115%;
         height: 100vh;
         &-text {
             position: relative;
             left: calc(100vw - 85vw);
-            top: calc(100vh - 73vh);
+            top: calc(100vh - 63vh);
             display: flex;
             gap: 2vh;
             flex-direction: column;
