@@ -78,6 +78,7 @@ $gap: 1vw;
     &-training {
         color: #4F75E2;
         padding: 2% $margin-left;
+        &-title {margin: 0;}
         z-index: -50;
         &-section {
             display: flex;
@@ -105,5 +106,32 @@ $gap: 1vw;
             }
         }
         &-botimg {height: 8vh;}
+    }
+    &-consulting {
+        &-title {margin: 0;}
+        &-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5vh;
+            &-step {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: $gap;
+                &-number {height: 12vh;}
+                &-description {
+                    display: flex;
+                    flex-direction: column;
+                    &-title {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.2vw;
+                        &-text {margin: 0;}
+                    }
+                    &-text {width: 40ch;}
+                }
+            }
+        }
     }
 }
