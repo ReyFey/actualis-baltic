@@ -135,3 +135,25 @@ $gap: 1vw;
         }
     }
 }
+.footer {
+    &-contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-title {letter-spacing: 0.2em;}
+        &-social {
+            display: flex;
+            width: 50%;
+            height: 5vh;
+            justify-content: space-evenly;
+            &-network {
+                display: flex;
+                align-items: center;
+                gap: 0.2vw;
+                &-link {text-decoration: none;}
+                &-text {color: #172144;}
+            }
+        }
+    }
+}
