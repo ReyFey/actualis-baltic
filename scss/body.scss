@@ -35,10 +35,6 @@ h2 {
     font-weight: 700;
 }
 
-blockquote, button {font-family: 'Open Sans', sans-serif;font-size: 15px;}
-
-span {font-weight: 700;}
-
 button {
     width: 153px;
     height: 43px;
@@ -48,3 +44,7 @@ button {
     color: white;
     &:hover {background: #618FFF;}
 }
+
+blockquote, button {font-family: 'Open Sans', sans-serif;font-size: 15px;}
+span {font-weight: 700;}
+p {font-size: 15px;}
