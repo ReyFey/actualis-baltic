@@ -43,11 +43,11 @@
 </head>
 <body>
 <header class="header">
-    <img class="header-link-img" src="svg/logo.svg" alt="Company's Logo">
+    <a class="header-link" href="#"><img class="header-link-img" src="svg/logo.svg" alt="Company's Logo"></a>
     <div class="header-topics">
-        <a class="header-topics-link" href="#">RECRUITEMENT</a>
-        <a class="header-topics-link" href="#">TRAINING</a>
-        <a class="header-topics-link" href="#">CONSULTING</a>
+        <a class="header-topics-link" href="#recruitment">RECRUITEMENT</a>
+        <a class="header-topics-link" href="#training">TRAINING</a>
+        <a class="header-topics-link" href="#consulting">CONSULTING</a>
     </div>
 </header>
 <main class="main">
@@ -59,10 +59,10 @@
                 recruitment and training projects and advising you
                 on the best solution.
             </blockquote>
-            <button class="main-presentation-button" type="submit" onclick="alert('test');">Learn more</button>
+            <button class="main-presentation-button" type="submit" onClick="window.scroll(0, 800);">Learn more</button>
         </div>
     </div>
-    <div class="ribbon">
+    <div id="recruitment" class="ribbon">
         <div class="ribbon-content">
             <h2 class="main-recruitment-title">RECRUITMENT</h2>
             <div class="main-recruitment-top">
@@ -108,7 +108,7 @@
             </div>
         </div>
     </div>
-    <div class="main-training">
+    <div id="training" class="main-training">
         <h2 class="main-training-title">TRAINING</h2>
         <div class="main-training-top main-training-section">
             <div class="main-training-section-element main-training-section-element-left">
@@ -168,7 +168,7 @@
             </div>
         </div>
     </div>
-    <div class="ribbon">
+    <div id="consulting" class="ribbon">
         <div class="ribbon-content">
             <h2 class="main-consulting-title">CONSULTING</h2>
             <div class="main-consulting-steps">

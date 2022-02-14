@@ -13,8 +13,8 @@ $header-height: 60px;
     z-index: 100;
     &-link {
         height: $header-height;
-        display: grid;
-        place-items: center;
+        display: flex;
+        align-items: center;
         &-img {height: 62%;}
     }
     &-topics {
