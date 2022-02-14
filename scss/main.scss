@@ -84,7 +84,7 @@ $gap: 1vw;
         &-content {
             display: flex;
             flex-direction: column;
-            gap: 4vh;
+            gap: 3vh;
         }
         &-section {
             display: flex;
@@ -119,7 +119,7 @@ $gap: 1vw;
             display: grid;
             grid-template-columns: 28vw 28vw;
             align-self: center;
-            row-gap: 30px;
+            row-gap: 5vh;
             &-step {
                 display: flex;
                 justify-content: center;
@@ -129,7 +129,10 @@ $gap: 1vw;
                 &-description {
                     display: flex;
                     flex-direction: column;
-                    &-text {width: 40ch;}
+                    &-text {
+                        margin: 0.3vh 0 0 0;
+                        width: 40ch;
+                    }
                     &-title {
                         display: flex;
                         justify-content: flex-start;
