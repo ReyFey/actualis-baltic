@@ -111,25 +111,26 @@ $gap: 1vw;
         &-title {margin: 0;}
         &-steps {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5vh;
+            grid-template-columns: 28vw 28vw;
+            align-self: center;
+            row-gap: 30px;
             &-step {
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 gap: $gap;
                 &-number {height: 12vh;}
                 &-description {
                     display: flex;
                     flex-direction: column;
+                    &-text {width: 40ch;}
                     &-title {
                         display: flex;
                         justify-content: flex-start;
                         align-items: center;
                         gap: 0.2vw;
                         &-text {margin: 0;}
-                    }
-                    &-text {width: 40ch;}
+                    }   
                 }
             }
         }
