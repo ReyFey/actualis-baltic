@@ -76,10 +76,16 @@ $gap: 1vw;
         }
     }
     &-training {
+        flex-direction: column;
         color: #4F75E2;
         padding: 2% $margin-left;
-        &-title {margin: 0;}
         z-index: -50;
+        &-title {margin: 0;}
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4vh;
+        }
         &-section {
             display: flex;
             justify-content: space-around;
