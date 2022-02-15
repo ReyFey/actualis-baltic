@@ -6,19 +6,19 @@ $gap: 1vw;
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../font/OpenSans-ExtraBold.ttf') format("truetype");
+    src: url('font/OpenSans-ExtraBold.ttf') format("truetype");
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../font/OpenSans-Bold.ttf') format("truetype");
+    src: url('font/OpenSans-Bold.ttf') format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../font/OpenSans-Regular.ttf') format("truetype");
+    src: url('font/OpenSans-Regular.ttf') format("truetype");
     font-weight: 500;
 }
 
@@ -91,7 +91,7 @@ p {font-size: clamp(13px, 1.5vw, 50px);}
 }
 
 .ribbon {
-    background-image: url('../svg/ribbon.svg');
+    background-image: url('svg/ribbon.svg');
     background-repeat: no-repeat;
     background-position: 55% 0;
     height: 58vh;
@@ -109,7 +109,7 @@ p {font-size: clamp(13px, 1.5vw, 50px);}
 
 .main {
     &-presentation {
-        background-image: url('../svg/map.svg');
+        background-image: url('svg/map.svg');
         background-repeat: no-repeat;
         background-position: 115%;
         height: 100vh;
