@@ -59,7 +59,8 @@ button {
 
 blockquote, button {font-family: 'Open Sans', sans-serif;font-size: 15px;}
 span {font-weight: 700;}
-p {font-size: clamp(13px, 1.5vw, 50px);}
+p {font-size: clamp(10px, 0.8vw, 40px);}
+
 
 .header {
     position: fixed;
@@ -237,6 +238,7 @@ p {font-size: clamp(13px, 1.5vw, 50px);}
         }
     }
 }
+
 .footer {
     &-contact {
         display: flex;
@@ -256,6 +258,74 @@ p {font-size: clamp(13px, 1.5vw, 50px);}
                 &-link {text-decoration: none;}
                 &-text {color: #172144;}
             }
+        }
+    }
+}
+
+.error {
+  &-header {
+    position: relative;
+    justify-content: center;
+  }
+  &-main {
+    height: calc(100vh - #{$header-height + $footer-height});
+    display: grid;
+    place-items: center;
+    &-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2vw;
+        &-img {height: 25vw;}
+        &-text {
+          color: #4F75E2;
+          text-align: center;
+          &-maintenance {width: 31ch;}
+          &-notfound {
+            &-title {margin: 0;}
+            &-description {
+                font-size: clamp(13px, 1.5vw, 50px);
+                width: 38ch;
+            }
+          }
+        }
+    }
+  }
+  &-footer {
+    height: $footer-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    gap: 2vw;
+    &-link {
+        color: #172144;
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-decoration: none;
+        gap: 0.5em;
+        &-text {
+            display: none;
+            &-icon {height: 2vh;}
+            &-icon_bubble {height: 2.5vh;}
+        }
+    }
+  }
+}
+
+@media only screen and (min-width: 941px) {
+    .error {
+        &-main-content {
+            flex-direction: row;
+            &-img {height: 10vw;}
+            &-text {text-align: left;}
+        }
+
+        &-footer {
+            justify-content: center;
+            &-link-text {display: block;}
         }
     }
 }
