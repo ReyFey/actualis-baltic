@@ -253,6 +253,7 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         align-items: center;
         &-title {letter-spacing: 0.2em;}
         &-social {
+            width: 100%;
             display: flex;
             align-items: center;
             height: $footer-height;
