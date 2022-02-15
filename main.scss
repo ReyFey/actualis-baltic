@@ -50,10 +50,10 @@ h3 {
 button {
     width: 153px;
     height: 43px;
-    background: #6182E1;
-    border-radius: 25px;
     border: 0;
     color: white;
+    border-radius: 25px;
+    background: #6182E1;
     &:hover {background: #618FFF;}
 }
 
@@ -65,12 +65,12 @@ blockquote, button {
 span {font-weight: 700;}
 p {font-size: clamp(10px, 0.8vw, 40px);}
 
+.box-shadow {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
 
 .header {
     position: fixed;
     width: 100%;
     opacity: 95%;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
     background-color: white;
     height: $header-height;
     display: flex;
@@ -242,8 +242,6 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         }
     }
 }
-
-#footer-boxshadow {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
 
 .footer {
     &-contact {
