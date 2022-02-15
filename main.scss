@@ -4,6 +4,7 @@ $margin-left: 15%;
 $gap: 1vw;
 
 
+
 @font-face {
     font-family: 'Open Sans';
     src: url('font/OpenSans-ExtraBold.ttf') format("truetype");
@@ -23,6 +24,7 @@ $gap: 1vw;
 }
 
 
+
 body {
     margin: 0;
     height: 100vh;
@@ -31,6 +33,7 @@ body {
     font-weight: 500;
     color: #172144;
 }
+
 
 h1 {
     font-size: clamp(35px, 3.5vw, 65px);
@@ -47,6 +50,7 @@ h3 {
     font-weight: 500;
 }
 
+
 hr {
     transform: rotate(90deg);
     border-radius: 7px 7px;
@@ -62,6 +66,8 @@ hr {
     width: 6vh;
 }
 
+
+
 button {
     width: 153px;
     height: 43px;
@@ -72,18 +78,22 @@ button {
     &:hover {background: #618FFF;}
 }
 
-blockquote, button {
-    font-family: 'Open Sans', sans-serif;
-    font-size: clamp(13px, 0.8vw, 20px);
-}
 
 a{text-decoration: none;}
+
 span {
     font-weight: 700;
     font-size: 0.9em;
 }
 
+
 p {font-size: clamp(10px, 0.8vw, 40px);}
+
+blockquote, button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(13px, 0.8vw, 20px);
+}
+
 
 .box-shadow {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
 
@@ -92,6 +102,8 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     justify-content: center;
     align-items: center;
 }
+
+
 
 .header {
     position: fixed;
@@ -113,6 +125,7 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         }
     }
 }
+
 
 .ribbon {
     background-image: url('svg/ribbon.svg');
@@ -241,6 +254,7 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     }
 }
 
+
 .footer {
     &-contact {
         // display: flex;
@@ -270,6 +284,8 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
           }
     }
 }
+
+
 
 .error {
   &-header {
@@ -302,6 +318,8 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     }
   }
 }
+
+
 
 @media only screen and (min-width: 941px) {
     .footer-contact-social {
