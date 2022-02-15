@@ -47,6 +47,21 @@ h3 {
     font-weight: 500;
 }
 
+hr {
+    transform: rotate(90deg);
+    border-radius: 7px 7px;
+}
+
+#separate-dark {
+    color: #172144;
+    width: 10vh;
+}
+
+#separate-blue {
+    color: #4F75E2;
+    width: 6vh;
+}
+
 button {
     width: 153px;
     height: 43px;
@@ -62,10 +77,21 @@ blockquote, button {
     font-size: clamp(13px, 0.8vw, 20px);
 }
 
-span {font-weight: 700;}
+a{text-decoration: none;}
+span {
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
 p {font-size: clamp(10px, 0.8vw, 40px);}
 
 .box-shadow {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .header {
     position: fixed;
@@ -73,22 +99,15 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     opacity: 95%;
     background-color: white;
     height: $header-height;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     z-index: 100;
     &-link {
         height: $header-height;
-        display: flex;
-        align-items: center;
         &-img {height: 62%;}
     }
     &-topics {
-        color: #4F75E2;
-        display: flex;
         gap: 5vw;
         &-link {
-            text-decoration: none;
             &:visited {color: #4F75E2;}
             &:hover {color: #1a4cd4;}
         }
@@ -104,10 +123,10 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     z-index: 50;
     &-content {
         color: white;
-        display: flex;
         height: 80%;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: unset;
         padding: 2% $margin-left;
     }
 }
@@ -116,13 +135,13 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     &-presentation {
         background-image: url('svg/map.svg');
         background-repeat: no-repeat;
-        background-position: 115%;
+        background-position: 45vw;
+        // background-position: clamp(0vw, 45vw, 60vw);
         height: 100vh;
         &-text {
             position: relative;
             left: $margin-left;
             top: calc(100vh - 63vh);
-            display: flex;
             gap: 2vh;
             flex-direction: column;
             align-items: flex-start;
@@ -145,21 +164,14 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     &-recruitment {
         &-title {margin: 0;}
         &-top {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             gap: $gap;
             &-img {height: 8vh;}
             &-text {width: 53ch;}
         }
         &-sections {
-            display: flex;
             justify-content: space-evenly;
-            align-items: center;
             &-section {
                 &-description {
-                    display: flex;
-                    align-items: center;
                     gap: $gap;
                     &-text {
                         margin: 0;
@@ -176,34 +188,21 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         z-index: -50;
         &-title {margin: 0;}
         &-content {
-            display: flex;
             flex-direction: column;
             gap: 3vh;
         }
         &-section {
-            display: flex;
             justify-content: space-around;
-            align-items: center;
+            gap: 2vw;
             &-element {
-                display: flex;
-                align-items: center;
                 gap: $gap;
                 &-text {width: 45ch;}
-                &-left {
-                    padding-right: 8%;
-                    border-right: 2px solid black;
-                    &-bot {border-right: 2px solid #4F75E2;}
-                }
             }
         }
         &-top {
             color: #172144;
             &-leftimg {height: 10vh;}
-            &-right {
-                flex-direction: column;
-                gap: 0.5vh;
-                &-elementimg {height: 7vh;}
-            }
+            &-rightimg {height: 7vh;}
         }
         &-botimg {height: 8vh;}
     }
@@ -215,22 +214,22 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
             align-self: center;
             row-gap: 5vh;
             &-step {
-                display: flex;
-                justify-content: center;
+                // display: flex;
+                // justify-content: center;
                 align-items: flex-start;
                 gap: $gap;
                 &-number {height: 12vh;}
                 &-description {
-                    display: flex;
+                    // display: flex;
                     flex-direction: column;
                     &-text {
                         margin: 0.3vh 0 0 0;
                         width: 40ch;
                     }
                     &-title {
-                        display: flex;
+                        // display: flex;
                         justify-content: flex-start;
-                        align-items: center;
+                        // align-items: center;
                         gap: 0.2vw;
                         &-text {
                             margin: 0;
@@ -245,25 +244,23 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
 
 .footer {
     &-contact {
-        display: flex;
+        // display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
         &-title {letter-spacing: 0.2em;}
         &-social {
             width: 100%;
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
             height: $footer-height;
             justify-content: space-evenly;
             gap: 2vw;
             &-network {
-                color: #172144;
-                display: flex;
-                align-items: center;
-                font-size: 0.9em;
-                font-weight: bold;
+                // display: flex;
+                // align-items: center;
                 text-decoration: none;
+                color: #172144;
                 gap: 0.5em;
                 &-text {
                     display: none;
@@ -285,8 +282,8 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     display: grid;
     place-items: center;
     &-content {
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
         flex-direction: column;
         gap: 2vw;
         &-img {height: 25vw;}
