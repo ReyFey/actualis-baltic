@@ -135,8 +135,7 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
     &-presentation {
         background-image: url('svg/map.svg');
         background-repeat: no-repeat;
-        background-position: 45vw;
-        // background-position: clamp(0vw, 45vw, 60vw);
+        background-position: clamp(0vw, 45vw, 60vw);
         height: 100vh;
         &-text {
             position: relative;
