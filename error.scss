@@ -1,0 +1,115 @@
+$header-height: 60px;
+$footer-height: 35px;
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/OpenSans-Bold.ttf') format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/OpenSans-Regular.ttf') format("truetype");
+    font-weight: 500;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: clamp(24px, 1.8vw, 52px);
+    font-weight: 700;
+}
+
+span {
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+p {font-size: clamp(12px, 1.3vw, 45px);}
+
+
+.box-shadow {box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.header {
+    height: $header-height;
+    justify-content: center;
+    &-link {
+        height: $header-height;
+        &-img {height: 62%;}
+    }
+}
+
+.footer {
+    &-contact-social {
+        height: $footer-height;
+        justify-content: space-evenly;
+        gap: 2vw;
+        &-network {
+            text-decoration: none;
+            color: #172144;
+            gap: 0.5em;
+            &-text {
+                display: none;
+                &-icon {height: 2vh;}
+                &-icon_bubble {height: 2.5vh;}
+            }
+        }
+    }
+}
+
+
+
+.error {
+  &-main {
+    height: calc(100vh - #{$header-height + $footer-height});
+    display: grid;
+    place-items: center;
+    &-content {
+        flex-direction: column;
+        gap: 2vw;
+        &-img {height: 25vw;}
+        &-text {
+          color: #4F75E2;
+          text-align: center;
+          &-maintenance {width: 31ch;}
+          &-notfound {
+            &-title {margin: 0;}
+            &-description {
+                margin-top: 1vh;
+                width: 38ch;
+            }
+          }
+        }
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 941px) {
+    .footer-contact-social {
+        justify-content: center;
+        &-network-text {display: block;}
+    }
+
+    .error {
+        &-main-content {
+            flex-direction: row;
+            &-img {height: 10vw;}
+            &-text {text-align: left;}
+        }
+    }
+}
