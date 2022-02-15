@@ -277,7 +277,7 @@ blockquote, button {
 
 .error {
   &-header {
-    position: relative;
+    position: unset;
     justify-content: center;
   }
   &-main {
