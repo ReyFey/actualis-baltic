@@ -251,18 +251,28 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         align-items: center;
         &-title {letter-spacing: 0.2em;}
         &-social {
+            width: 100%;
             display: flex;
-            width: 50%;
-            height: 5vh;
+            align-items: center;
+            height: $footer-height;
             justify-content: space-evenly;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+            gap: 2vw;
             &-network {
+                color: #172144;
                 display: flex;
                 align-items: center;
-                gap: 0.2vw;
-                &-link {text-decoration: none;}
-                &-text {color: #172144;}
+                font-size: 0.9em;
+                font-weight: bold;
+                text-decoration: none;
+                gap: 0.5em;
+                &-text {
+                    display: none;
+                    &-icon {height: 2vh;}
+                    &-icon_bubble {height: 2.5vh;}
+                }
             }
-        }
+          }
     }
 }
 
@@ -296,41 +306,19 @@ p {font-size: clamp(10px, 0.8vw, 40px);}
         }
     }
   }
-  &-footer {
-    height: $footer-height;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
-    gap: 2vw;
-    &-link {
-        color: #172144;
-        display: flex;
-        align-items: center;
-        font-size: 0.9em;
-        font-weight: bold;
-        text-decoration: none;
-        gap: 0.5em;
-        &-text {
-            display: none;
-            &-icon {height: 2vh;}
-            &-icon_bubble {height: 2.5vh;}
-        }
-    }
-  }
 }
 
 @media only screen and (min-width: 941px) {
+    .footer-contact-social {
+        justify-content: center;
+        &-network-text {display: block;}
+    }
+
     .error {
         &-main-content {
             flex-direction: row;
             &-img {height: 10vw;}
             &-text {text-align: left;}
-        }
-
-        &-footer {
-            justify-content: center;
-            &-link-text {display: block;}
         }
     }
 }
