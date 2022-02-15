@@ -1,5 +1,94 @@
+$header-height: 60px;
+$footer-height: 35px;
 $margin-left: 15%;
 $gap: 1vw;
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-ExtraBold.ttf') format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-Bold.ttf') format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../font/OpenSans-Regular.ttf') format("truetype");
+    font-weight: 500;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    font-weight: 500;
+    color: #172144;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: clamp(24px, 1.8vw, 52px);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: clamp(15px, 1.4vw, 40px);
+    font-weight: 500;
+}
+
+button {
+    width: 153px;
+    height: 43px;
+    background: #6182E1;
+    border-radius: 25px;
+    border: 0;
+    color: white;
+    &:hover {background: #618FFF;}
+}
+
+blockquote, button {font-family: 'Open Sans', sans-serif;font-size: 15px;}
+span {font-weight: 700;}
+p {font-size: clamp(13px, 1.5vw, 50px);}
+
+.header {
+    position: fixed;
+    width: 100%;
+    opacity: 95%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    height: $header-height;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    &-link {
+        height: $header-height;
+        display: flex;
+        align-items: center;
+        &-img {height: 62%;}
+    }
+    &-topics {
+        color: #4F75E2;
+        display: flex;
+        gap: 5vw;
+        &-link {
+            text-decoration: none;
+            &:visited {color: #4F75E2;}
+            &:hover {color: #1a4cd4;}
+        }
+    }
+}
 
 .ribbon {
     background-image: url('../svg/ribbon.svg');
