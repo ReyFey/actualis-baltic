@@ -118,6 +118,7 @@ blockquote, button {
         &-img {height: 62%;}
     }
     &-topics {
+        display: none;
         gap: 5vw;
         &-link {
             &:visited {color: #4F75E2;}
@@ -307,6 +308,7 @@ blockquote, button {
 
 
 @media only screen and (min-width: 941px) {
+    .header-topics {display:flex;}
     .footer-contact-social {
         justify-content: center;
         &-network-text {display: block;}
