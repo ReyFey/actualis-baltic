@@ -286,8 +286,6 @@ blockquote, button {
     display: grid;
     place-items: center;
     &-content {
-        // display: flex;
-        // align-items: center;
         flex-direction: column;
         gap: 2vw;
         &-img {height: 25vw;}
