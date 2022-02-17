@@ -113,17 +113,27 @@ blockquote, button {
     height: $header-height;
     justify-content: space-around;
     z-index: 100;
-    &-link {
-        height: $header-height;
-        &-img {height: 62%;}
-    }
-    &-topics {
+    &-topics {display: none;}
+    &-burger {display: unset;}
+    &-menu {
         display: none;
-        gap: 5vw;
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0% 0% 0% 25%;
+        padding: 5px clamp(5px, 15vw, 100px) 10px 10px;
+        text-align: right;
+        color: #4F75E2;
+        top: 5vh;
+        right: 0;
         &-link {
             &:visited {color: #4F75E2;}
             &:hover {color: #1a4cd4;}
         }
+    }
+    &-link {
+        height: $header-height;
+        &-img {height: 62%;}
     }
 }
 
@@ -307,8 +317,17 @@ blockquote, button {
 
 
 
-@media only screen and (min-width: 941px) {
-    .header-topics {display:flex;}
+@media only screen and (min-width: 600px) {
+    .header-topics {
+        display: flex;
+        gap: 5vw;
+        &-link {
+            &:visited {color: #4F75E2;}
+            &:hover {color: #1a4cd4;}
+        }
+    }
+    .header-burger {display: none;}
+    .header-menu {display: none;}
     .footer-contact-social {
         justify-content: center;
         &-network-text {display: block;}

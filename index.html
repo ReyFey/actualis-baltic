@@ -38,6 +38,9 @@
     <title>Actualis Baltic</title>
     <link rel="shortcut icon" href="svg/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
+    <script>
+        window.matchMedia("(min-width: 600px)").addListener( () => {if (window.matchMedia("(min-width: 600px)").matches && document.getElementById("header-menu").style.display === 'flex') {document.getElementById("header-menu").style.display = '';}});
+    </script>
 </head>
 <body>
 <header class="header flex-center box-shadow">
@@ -46,6 +49,14 @@
         <a class="header-topics-link" href="#recruitment">RECRUITEMENT</a>
         <a class="header-topics-link" href="#training">TRAINING</a>
         <a class="header-topics-link" href="#consulting">CONSULTING</a>
+    </div>
+    <a class="header-burger" href="javascript:void(0);" onclick="document.getElementById('header-menu').style.display === '' ? document.getElementById('header-menu').style.display = 'flex' : document.getElementById('header-menu').style.display = '';">
+        <img src="svg/menu.svg" alt="Menu">
+    </a>
+    <div id="header-menu" class="header-menu">
+        <a class="header-menu-link" href="#recruitment">RECRUITEMENT</a>
+        <a class="header-menu-link" href="#training">TRAINING</a>
+        <a class="header-menu-link" href="#consulting">CONSULTING</a>
     </div>
 </header>
 <main class="main">
