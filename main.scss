@@ -36,7 +36,7 @@ body {
 
 
 h1 {
-    font-size: clamp(35px, 3.5vw, 65px);
+    font-size: 60px;
     font-weight: 900;
 }
 
@@ -143,6 +143,7 @@ blockquote, button {
     margin: -0.5%;
     z-index: 50;
     &-content {
+        height: 100%;
         color: white;
         flex-direction: column;
         justify-content: space-evenly;
@@ -159,7 +160,7 @@ blockquote, button {
         height: 100vh;
         &-text {
             position: relative;
-            left: $margin-left;
+            left: 5%;
             top: calc(100vh - 63vh);
             gap: 2vh;
             flex-direction: column;
@@ -172,10 +173,10 @@ blockquote, button {
                 margin: 0;
                 border-left: 2px solid #4F75E2;
                 letter-spacing: 0.2em;
-                padding-left: 1.5vw;
+                padding-left: 5vw;
                 margin-left: 1vw;
                 line-height: 30px;
-                width: 60ch;
+                width: 30ch;
             }
             &-line {z-index: 100;}
         }
@@ -333,6 +334,13 @@ blockquote, button {
     .ribbon-content{height: 80%;}
 
     .main {
+        &-presentation-text {
+            left: $margin-left;
+            &-quote {
+                width: 60ch;
+                padding-left: 1.5vw;
+            }
+        }
         &-recruitment-sections{flex-direction: row;}
         &-training-section {flex-direction: row;}
         &-consulting-steps {
