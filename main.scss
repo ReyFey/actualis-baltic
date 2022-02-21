@@ -198,7 +198,7 @@ blockquote, button {
                 gap: $gap;
                 &-title {margin: 0;}
                 &-description {
-                    gap: $gap;
+                    gap: 2vw;
                     &-img {height: 6vh;}
                     &-text {
                         margin: 0;
@@ -209,9 +209,12 @@ blockquote, button {
         }
     }
     &-training {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         color: #4F75E2;
         padding: 2% $margin-left;
+        margin: 2vh;
         z-index: -50;
         &-title {margin: 0;}
         &-content {
@@ -235,6 +238,7 @@ blockquote, button {
         &-botimg {height: 8vh;}
     }
     &-consulting {
+        margin-bottom: 5vh;
         &-title {margin: 0;}
         &-steps {
             display: flex;
@@ -364,11 +368,18 @@ blockquote, button {
                 gap: 2vw;
                 &-section {
                     align-items: flex-start;
-                    &-description-img {height: 8vh;}
+                    &-description {
+                        gap: $gap;
+                        &-img {height: 8vh;}
+                    }
                 }
             }
         }
-        &-training-section {flex-direction: row;}
+        &-training {
+            align-items: unset;
+            margin: -3vh 0 5vh 0;
+            &-section {flex-direction: row;}
+        }
         &-consulting-steps {
             display: grid;
             grid-template-columns: 28vw 28vw;
