@@ -141,7 +141,7 @@ blockquote, button {
     background-repeat: no-repeat;
     background-position: 55% 0;
     height: 58vh;
-    margin: -1vh;
+    margin-top: -1vh;
     z-index: 50;
     &-content {
         height: 100%;
@@ -338,7 +338,7 @@ blockquote, button {
     }
     
     .ribbon {
-        margin: -3vh;
+        margin-top: -3vh;
         &-content{
             height: 80%;
             align-items: unset;
