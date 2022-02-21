@@ -51,10 +51,7 @@ h3 {
 }
 
 
-hr {
-    transform: rotate(90deg);
-    border-radius: 7px 7px;
-}
+hr {border-radius: 7px 7px;}
 
 #separate-dark {
     color: #172144;
@@ -147,7 +144,6 @@ blockquote, button {
     z-index: 50;
     &-content {
         color: white;
-        height: 80%;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: unset;
@@ -192,6 +188,7 @@ blockquote, button {
             &-text {width: 53ch;}
         }
         &-sections {
+            flex-direction: column;
             justify-content: space-evenly;
             &-section {
                 &-description {
@@ -215,6 +212,7 @@ blockquote, button {
             gap: 3vh;
         }
         &-section {
+            flex-direction: column;
             justify-content: space-around;
             gap: 2vw;
             &-element {
@@ -232,10 +230,9 @@ blockquote, button {
     &-consulting {
         &-title {margin: 0;}
         &-steps {
-            display: grid;
-            grid-template-columns: 28vw 28vw;
-            align-self: center;
-            row-gap: 5vh;
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
             &-step {
                 align-items: flex-start;
                 gap: $gap;
@@ -318,16 +315,33 @@ blockquote, button {
 
 
 @media only screen and (min-width: 600px) {
-    .header-topics {
-        display: flex;
-        gap: 5vw;
-        &-link {
-            &:visited {color: #4F75E2;}
-            &:hover {color: #1a4cd4;}
+    hr {transform: rotate(90deg);}
+
+    .header {
+        &-burger {display: none;}
+        &-menu {display: none;}
+        &-topics {
+            display: flex;
+            gap: 5vw;
+            &-link {
+                &:visited {color: #4F75E2;}
+                &:hover {color: #1a4cd4;}
+            }
         }
     }
-    .header-burger {display: none;}
-    .header-menu {display: none;}
+    
+    .ribbon-content{height: 80%;}
+
+    .main {
+        &-recruitment-sections{flex-direction: row;}
+        &-training-section {flex-direction: row;}
+        &-consulting-steps {
+            display: grid;
+            grid-template-columns: 28vw 28vw;
+            align-self: center;
+            row-gap: 5vh;
+        }
+    }
     .footer-contact-social {
         justify-content: center;
         &-network-text {display: block;}
