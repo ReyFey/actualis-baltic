@@ -29,6 +29,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
+    text-align: justify;
     overflow-x: hidden;
     font-weight: 500;
     color: #172144;
@@ -360,6 +361,7 @@ blockquote, button {
             }
             &-sections{
                 flex-direction: row;
+                gap: 2vw;
                 &-section {
                     align-items: flex-start;
                     &-description-img {height: 8vh;}
