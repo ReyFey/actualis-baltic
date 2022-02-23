@@ -221,8 +221,9 @@ blockquote, button {
         &-title {margin: 0;}
         &-botimg {height: 6vh;}
         &-content {
+            width: 100%;
             flex-direction: column;
-            gap: 3vh;
+            gap: 1vh;
         }
         &-section {
             flex-direction: column;
@@ -230,6 +231,7 @@ blockquote, button {
             gap: 2vw;
             &-element {
                 gap: $gap;
+                justify-content: flex-start;
                 &-text {width: 45ch;}
             }
         }
@@ -237,13 +239,15 @@ blockquote, button {
             color: #172144;
             &-leftimg {height: 8vh;}
             &-right {
-                gap: 1vh;
-                &img {height: 6vh;}
-                &-element{
-                    width: 30vw;
-                    flex-direction: column;
-                    text-align: center;
-                }
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 5vh 10vh;
+                grid-auto-flow: column;
+                justify-items: center;
+                text-align: center;
+                row-gap: 1vh;
+                &-text {margin: 0;}
+                &-img{height: 5vh;}
             }
         }
     }
@@ -392,18 +396,25 @@ blockquote, button {
         &-training {
             align-items: unset;
             margin: -3vh 0 5vh 0;
-            &-section {flex-direction: row;}
+            &-content{gap: 3vh;}
+            &-section {
+                &-element {width: 23vw;}
+                flex-direction: row;
+            }
             &-botimg {height: 7vh;}
             &-top {
                 &-leftimg {height: 10vh;}
                 &-right {
-                    flex-direction: column;
-                    &-img {height: 7vh;}
-                    &-element {
-                        flex-direction: row;
-                        text-align: left;
-                        gap: $gap;
-                    }
+                    grid-template-columns: 5vw 20vw;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    grid-auto-flow: row;
+                    align-items: center;
+                    justify-items: left;
+                    text-align: left;
+                    // &:nth-child(n) {justify-items: center;}
+                    row-gap: 2vh;
+                    &-text {margin: 0;}
+                    &-img{height: 6vh;}
                 }
             }
         }
