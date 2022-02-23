@@ -137,10 +137,11 @@ blockquote, button {
 
 
 .ribbon {
-    background-image: url('svg/ribbon.svg');
-    background-repeat: no-repeat;
+    background-image: url('svg/ribbon_mobile.svg');
     background-position: 55% 0;
-    height: 58vh;
+    background-repeat: no-repeat;
+    height: 63vh;
+    width: 100%;
     margin-top: -1vh;
     z-index: 50;
     &-content {
@@ -185,7 +186,8 @@ blockquote, button {
     &-recruitment {
         &-title {margin: 0;}
         &-top {
-            gap: 2vw;
+            flex-direction: column;
+            text-align: center;
             &-img {height: 6vh;}
             &-text {width: 53ch;}
         }
@@ -217,6 +219,7 @@ blockquote, button {
         margin: 2vh;
         z-index: -50;
         &-title {margin: 0;}
+        &-botimg {height: 6vh;}
         &-content {
             flex-direction: column;
             gap: 3vh;
@@ -232,22 +235,28 @@ blockquote, button {
         }
         &-top {
             color: #172144;
-            &-leftimg {height: 10vh;}
-            &-rightimg {height: 7vh;}
+            &-leftimg {height: 8vh;}
+            &-right {
+                gap: 1vh;
+                &img {height: 6vh;}
+                &-element{
+                    width: 30vw;
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
         }
-        &-botimg {height: 8vh;}
     }
     &-consulting {
-        margin-bottom: 5vh;
         &-title {margin: 0;}
         &-steps {
             display: flex;
             flex-direction: column;
-            gap: $gap;
+            gap: 2.5vh;
             &-step {
                 align-items: flex-start;
-                gap: $gap;
-                &-number {height: 12vh;}
+                gap: 3vw;
+                &-number {height: 10vh;}
                 &-description {
                     flex-direction: column;
                     align-items: flex-start;
@@ -342,6 +351,9 @@ blockquote, button {
     }
     
     .ribbon {
+        background-image: url('svg/ribbon.svg');
+        background-position: 55% 0;
+        height: 50vh;
         margin-top: -3vh;
         &-content{
             height: 80%;
@@ -361,6 +373,8 @@ blockquote, button {
         &-recruitment {
             &-top {
                 gap: $gap;
+                flex-direction: row;
+                text-align: justify;
                 &-img {height: 8vh;}
             }
             &-sections{
@@ -379,12 +393,30 @@ blockquote, button {
             align-items: unset;
             margin: -3vh 0 5vh 0;
             &-section {flex-direction: row;}
+            &-botimg {height: 7vh;}
+            &-top {
+                &-leftimg {height: 10vh;}
+                &-right {
+                    flex-direction: column;
+                    &-img {height: 7vh;}
+                    &-element {
+                        flex-direction: row;
+                        text-align: left;
+                        gap: $gap;
+                    }
+                }
+            }
         }
         &-consulting-steps {
             display: grid;
             grid-template-columns: 28vw 28vw;
             align-self: center;
             row-gap: 5vh;
+            gap: $gap;
+            &-step {
+                &-number {height: 12vh;}
+                gap: $gap;
+            }
         }
     }
     .footer-contact-social {
