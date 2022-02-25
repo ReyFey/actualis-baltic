@@ -217,7 +217,7 @@ blockquote, button {
         z-index: -50;
         align-items: center;
         margin: 2vh;
-        &-content {
+        /* &-content {
             display: grid;
             grid-template-columns: 1fr;
             row-gap: 3vh;
@@ -249,7 +249,7 @@ blockquote, button {
                     }
                 }
             }
-        }
+        } */
     }
     &-consulting {
         &-title {margin: 0;}
@@ -406,35 +406,39 @@ blockquote, button {
             margin: -3vh 0 5vh 0;
             &-title {margin: 0;}
             &-content {
-                grid-template-columns: 23vw 8vw 23vw;
+                display: grid;
+                place-self: center;
+                grid-template-columns: 6vw 19vw 5vw 6vw 19vw;
+                grid-template-rows: 25vh 10vh;
+                align-self: center;
+                align-items: center;
+                column-gap: 0;
                 row-gap: 5vh;
-                &-section {
-                    flex-direction: column;
-                    &-element {
-                        display: flex;
-                        justify-content: flex-start;
-                        flex-direction: row;
-                        gap: $gap;
-                        &--small {width: 18vw;}
-                        &-text {
-                            width: auto;
-                            text-align: justify;
-                            &--black {color: #172144;}
-                        }
-                        &-img {
-                            height: 7vh;
-                            &--big {height: 10vh;}
-                        }
+                color: #172144;
+                &>*:nth-child(n+6) {color: #4F75E2;}
+                &>*:nth-child(5n-2), &>*:nth-child(5n+1), &>*:nth-child(5n+4) {justify-self: center;margin: 0;}
+                &-col {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 8vh 8vh 8vh;
+                    row-gap: 1vh;
+                    align-items: center;
+                    &-img {height: 7vh;}
+                    &-text {margin: 0;}
+                    &--center {
+                        justify-items: center;
+                        &>*:nth-child(n) {height: 6vh;}
                     }
                 }
             }
         }
         &-consulting-steps {
-            grid-template-columns: 4vw 19vw 5vw 4vw 19vw;
-            grid-template-rows: 13vh 13vh;
+            grid-template-columns: 6vw 19vw 5vw 6vw 19vw;
+            grid-template-rows: 10vh 10vh;
             align-items: flex-start;
-            column-gap: $gap;
-            row-gap: 1vh;
+            column-gap: 0;
+            row-gap: 5vh;
+            &>*:nth-child(5n+1), &>*:nth-child(5n+4) {justify-self: center;margin: 0;}
             &-number {height: 10vh;}
             &-content {
                 display: flex;
@@ -443,8 +447,8 @@ blockquote, button {
                 &-header {
                     gap: 0.5vw;
                     &-img {
-                        height: 2.5vh;
-                        &--big {height: 3vh;}
+                        height: 2.25vh;
+                        &--big {height: 2.75vh;}
                     }
                 }
             }
