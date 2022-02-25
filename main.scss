@@ -414,14 +414,13 @@ blockquote, button {
                     align-items: center;
                     justify-items: left;
                     text-align: left;
-                    // &:nth-child(n) {justify-items: center;}
+                    & > *:nth-child(odd) {justify-self: center;}
                     row-gap: 2vh;
                     &-img{height: 7vh;}
                     &-text {
                         margin: 0;
                         font-size: clamp(10px, 0.8vw, 40px);
                     }
-                    // font-size: 7px;
                 }
             }
         }
