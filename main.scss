@@ -24,6 +24,11 @@ $gap: 1vw;
 }
 
 
+.blue {color: #4F75E2;}
+.dark {color: #172144;}
+
+.mobile {display: unset;}
+.other {display: none;}
 
 body {
     margin: 0;
@@ -54,17 +59,11 @@ h3 {
 
 hr {border-radius: 7px 7px;}
 
-#separate-dark {
-    color: #172144;
-    width: 10vh;
+#separate-blue-mobile {
+    width: 40vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
-
-#separate-blue {
-    color: #4F75E2;
-    width: 6vh;
-}
-
-
 
 button {
     width: 153px;
@@ -210,50 +209,47 @@ blockquote, button {
             }
         }
     }
-    // &-training {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     color: #4F75E2;
-    //     padding: 2% $margin-left;
-    //     margin: 2vh;
-    //     z-index: -50;
-    //     &-title {margin: 0;}
-    //     &-botimg {height: 6vh;}
-    //     &-content {
-    //         width: 100%;
-    //         flex-direction: column;
-    //         gap: 1vh;
-    //     }
-    //     &-section {
-    //         flex-direction: column;
-    //         justify-content: space-around;
-    //         gap: 2vw;
-    //         &-element {
-    //             gap: $gap;
-    //             justify-content: flex-start;
-    //             &-text {width: 45ch;}
-    //         }
-    //     }
-    //     &-top {
-    //         color: #172144;
-    //         &-leftimg {height: 8vh;}
-    //         &-right {
-    //             display: grid;
-    //             grid-template-columns: 25vw 25vw 25vw;
-    //             grid-template-rows: 5vh 5vh;
-    //             grid-auto-flow: column;
-    //             justify-items: center;
-    //             text-align: center;
-    //             row-gap: 1vh;
-    //             &-img{height: 5vh;}
-    //             &-text {
-    //                 margin: 0;
-    //                 font-size: 7px;
-    //             }
-    //         }
-    //     }
-    // }
+    &-training {
+        display: flex;
+        flex-direction: column;
+        color: #4F75E2;
+        z-index: -50;
+        align-items: center;
+        margin: 2vh;
+        &-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 3vh;
+            place-self: center;
+            align-items: center;
+            &-section {
+                display: flex;
+                flex-direction: row;
+                &-element {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: $gap;
+                    &--row {
+                        flex-direction: row;
+                        gap: 2vw;
+                    }
+                    &--small {width: 30vw;}
+                    &-text {
+                        width: 40ch;
+                        text-align: center;
+                        &--justify{text-align: justify;}
+                        &--black {color: #172144;}
+                    }
+                    &-img {
+                        height: 7vh;
+                        &--big {height: 9vh;}
+                    }
+                }
+            }
+        }
+    }
     &-consulting {
         &-title {margin: 0;}
         &-steps {
@@ -342,7 +338,12 @@ blockquote, button {
 
 
 @media only screen and (min-width: 600px) {
+    .mobile {display: none;}
+    .other {display: unset;}
+
     hr {transform: rotate(90deg);}
+    #separate-dark-other {width: 10vh;}
+    #separate-blue-other {width: 6vh;}
 
     .header {
         &-burger {display: none;}
@@ -397,27 +398,25 @@ blockquote, button {
             }
         }
         &-training {
-            display: flex;
-            flex-direction: column;
-            color: #4F75E2;
             padding: 2% $margin-left;
-            z-index: -50;
             align-items: unset;
             margin: -3vh 0 5vh 0;
             &-content {
-                display: grid;
                 grid-template-columns: 23vw 6vw 23vw;
                 row-gap: 5vh;
-                place-self: center;
-                align-items: center;
                 &-section {
-                    display: flex;
                     flex-direction: column;
                     &-element {
                         display: flex;
-                        align-items: center;
+                        justify-content: flex-start;
+                        flex-direction: row;
                         gap: $gap;
-                        &-text--black {color: #172144;}
+                        &--small {width: 18vw;}
+                        &-text {
+                            width: auto;
+                            text-align: justify;
+                            &--black {color: #172144;}
+                        }
                         &-img {
                             height: 7vh;
                             &--big {height: 10vh;}
