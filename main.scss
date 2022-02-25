@@ -210,50 +210,50 @@ blockquote, button {
             }
         }
     }
-    &-training {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: #4F75E2;
-        padding: 2% $margin-left;
-        margin: 2vh;
-        z-index: -50;
-        &-title {margin: 0;}
-        &-botimg {height: 6vh;}
-        &-content {
-            width: 100%;
-            flex-direction: column;
-            gap: 1vh;
-        }
-        &-section {
-            flex-direction: column;
-            justify-content: space-around;
-            gap: 2vw;
-            &-element {
-                gap: $gap;
-                justify-content: flex-start;
-                &-text {width: 45ch;}
-            }
-        }
-        &-top {
-            color: #172144;
-            &-leftimg {height: 8vh;}
-            &-right {
-                display: grid;
-                grid-template-columns: 25vw 25vw 25vw;
-                grid-template-rows: 5vh 5vh;
-                grid-auto-flow: column;
-                justify-items: center;
-                text-align: center;
-                row-gap: 1vh;
-                &-img{height: 5vh;}
-                &-text {
-                    margin: 0;
-                    font-size: 7px;
-                }
-            }
-        }
-    }
+    // &-training {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     color: #4F75E2;
+    //     padding: 2% $margin-left;
+    //     margin: 2vh;
+    //     z-index: -50;
+    //     &-title {margin: 0;}
+    //     &-botimg {height: 6vh;}
+    //     &-content {
+    //         width: 100%;
+    //         flex-direction: column;
+    //         gap: 1vh;
+    //     }
+    //     &-section {
+    //         flex-direction: column;
+    //         justify-content: space-around;
+    //         gap: 2vw;
+    //         &-element {
+    //             gap: $gap;
+    //             justify-content: flex-start;
+    //             &-text {width: 45ch;}
+    //         }
+    //     }
+    //     &-top {
+    //         color: #172144;
+    //         &-leftimg {height: 8vh;}
+    //         &-right {
+    //             display: grid;
+    //             grid-template-columns: 25vw 25vw 25vw;
+    //             grid-template-rows: 5vh 5vh;
+    //             grid-auto-flow: column;
+    //             justify-items: center;
+    //             text-align: center;
+    //             row-gap: 1vh;
+    //             &-img{height: 5vh;}
+    //             &-text {
+    //                 margin: 0;
+    //                 font-size: 7px;
+    //             }
+    //         }
+    //     }
+    // }
     &-consulting {
         &-title {margin: 0;}
         &-steps {
@@ -397,29 +397,31 @@ blockquote, button {
             }
         }
         &-training {
+            display: flex;
+            flex-direction: column;
+            color: #4F75E2;
+            padding: 2% $margin-left;
+            z-index: -50;
             align-items: unset;
             margin: -3vh 0 5vh 0;
-            &-content{gap: 3vh;}
-            &-section {
-                &-element {width: 23vw;}
-                flex-direction: row;
-            }
-            &-botimg {height: 7vh;}
-            &-top {
-                &-leftimg {height: 10vh;}
-                &-right {
-                    grid-template-columns: 4.5vw 20vw;
-                    grid-template-rows: 1fr 1fr 1fr;
-                    grid-auto-flow: row;
-                    align-items: center;
-                    justify-items: left;
-                    text-align: left;
-                    & > *:nth-child(odd) {justify-self: center;}
-                    row-gap: 2vh;
-                    &-img{height: 7vh;}
-                    &-text {
-                        margin: 0;
-                        font-size: clamp(10px, 0.8vw, 40px);
+            &-content {
+                display: grid;
+                grid-template-columns: 23vw 6vw 23vw;
+                row-gap: 5vh;
+                place-self: center;
+                align-items: center;
+                &-section {
+                    display: flex;
+                    flex-direction: column;
+                    &-element {
+                        display: flex;
+                        align-items: center;
+                        gap: $gap;
+                        &-text--black {color: #172144;}
+                        &-img {
+                            height: 7vh;
+                            &--big {height: 10vh;}
+                        }
                     }
                 }
             }
@@ -427,7 +429,7 @@ blockquote, button {
         &-consulting-steps {
             display: grid;
             grid-template-columns: 28vw 28vw;
-            align-self: center;
+            place-self: center;
             row-gap: 5vh;
             gap: $gap;
             &-step {
