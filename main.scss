@@ -26,6 +26,7 @@ $gap: 1vw;
 
 .blue {color: #4F75E2;}
 .dark {color: #172144;}
+.white {color: white;}
 
 .mobile {display: unset;}
 .other {display: none;}
@@ -59,7 +60,7 @@ h3 {
 
 hr {border-radius: 7px 7px;}
 
-#separate-blue-mobile {
+#separate-training-blue-mobile {
     width: 40vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -76,7 +77,7 @@ button {
 }
 
 
-a{text-decoration: none;}
+a {text-decoration: none;}
 
 span {
     font-weight: 700;
@@ -253,28 +254,24 @@ blockquote, button {
     &-consulting {
         &-title {margin: 0;}
         &-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5vh;
-            &-step {
-                align-items: flex-start;
-                gap: 3vw;
-                &-number {height: 10vh;}
-                &-description {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    &-text {
-                        margin: 0.3vh 0 0 0;
-                        width: 40ch;
+            display: grid;
+            place-self: center;
+            grid-template-columns: 18vw 50vw;
+            grid-template-rows: 10vh 10vh;
+            row-gap: 2vh;
+            column-gap: 2vw;
+            &-number {height: 9vh;}
+            &-content {
+                &-description {margin: 0;}
+                &-header {
+                    display: flex;
+                    gap: $gap;
+                    align-items: center;
+                    &-title {margin: 0;}
+                    &-img {
+                        height: 2vh;
+                        &--big {height: 2.5vh;}
                     }
-                    &-title {
-                        justify-content: flex-start;
-                        gap: 0.2vw;
-                        &-text {
-                            margin: 0;
-                            font-weight: 700;
-                        }
-                    }   
                 }
             }
         }
@@ -341,9 +338,14 @@ blockquote, button {
     .mobile {display: none;}
     .other {display: unset;}
 
-    hr {transform: rotate(90deg);}
-    #separate-dark-other {width: 10vh;}
-    #separate-blue-other {width: 6vh;}
+    .training {transform: rotate(90deg);}
+    #separate-training-dark-other {width: 10vh;}
+    #separate-training-blue-other {width: 6vh;}
+    #separate-consulting-white-other-bot {height: 0vh;}
+    #separate-consulting-white-other-top {
+        height: 15vh;
+        margin-top: 5vh;
+    }
 
     .header {
         &-burger {display: none;}
@@ -364,6 +366,7 @@ blockquote, button {
         height: 50vh;
         margin-top: -3vh;
         &-content{
+            gap: 3vh;
             height: 80%;
             align-items: unset;
         }
@@ -401,8 +404,9 @@ blockquote, button {
             padding: 2% $margin-left;
             align-items: unset;
             margin: -3vh 0 5vh 0;
+            &-title {margin: 0;}
             &-content {
-                grid-template-columns: 23vw 6vw 23vw;
+                grid-template-columns: 23vw 8vw 23vw;
                 row-gap: 5vh;
                 &-section {
                     flex-direction: column;
@@ -426,14 +430,23 @@ blockquote, button {
             }
         }
         &-consulting-steps {
-            display: grid;
-            grid-template-columns: 28vw 28vw;
-            place-self: center;
-            row-gap: 5vh;
-            gap: $gap;
-            &-step {
-                &-number {height: 12vh;}
-                gap: $gap;
+            grid-template-columns: 4vw 19vw 5vw 4vw 19vw;
+            grid-template-rows: 13vh 13vh;
+            align-items: flex-start;
+            column-gap: $gap;
+            row-gap: 1vh;
+            &-number {height: 10vh;}
+            &-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                &-header {
+                    gap: 0.5vw;
+                    &-img {
+                        height: 2.5vh;
+                        &--big {height: 3vh;}
+                    }
+                }
             }
         }
     }
