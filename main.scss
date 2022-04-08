@@ -197,6 +197,7 @@ blockquote, button {
             justify-content: space-evenly;
             &-section {
                 flex-direction: column;
+                justify-content: flex-start;
                 gap: $gap;
                 &-title {margin: 0;}
                 &-description {
@@ -213,43 +214,28 @@ blockquote, button {
     &-training {
         display: flex;
         flex-direction: column;
-        color: #4F75E2;
-        z-index: -50;
         align-items: center;
-        margin: 2vh;
-        /* &-content {
+        margin-bottom: 3vh;
+        &-content {
             display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 3vh;
-            place-self: center;
+            grid-template-columns: 20vw 25ch;
+            align-self: center;
             align-items: center;
-            &-section {
-                display: flex;
-                flex-direction: row;
-                &-element {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    gap: $gap;
-                    &--row {
-                        flex-direction: row;
-                        gap: 2vw;
-                    }
-                    &--small {width: 30vw;}
-                    &-text {
-                        width: 40ch;
-                        text-align: center;
-                        &--justify{text-align: justify;}
-                        &--black {color: #172144;}
-                    }
-                    &-img {
-                        height: 7vh;
-                        &--big {height: 9vh;}
-                    }
-                }
+            column-gap: $gap;
+            &-img {
+                height: 7vh;
+                justify-self: center;
+                &--big {height: 9vh;}
             }
-        } */
+            &-col {
+                display: grid;
+                grid-template-rows: 7vh 7vh 7vh;
+                align-self: center;
+                align-items: center;
+                &-img {height: 5vh;justify-self: center;}
+                &-text {margin: 0;}
+            }
+        }
     }
     &-consulting {
         &-title {margin: 0;}
@@ -407,12 +393,8 @@ blockquote, button {
             margin: -3vh 0 5vh 0;
             &-title {margin: 0;}
             &-content {
-                display: grid;
-                place-self: center;
                 grid-template-columns: 6vw 19vw 5vw 6vw 19vw;
                 grid-template-rows: 25vh 10vh;
-                align-self: center;
-                align-items: center;
                 column-gap: 0;
                 row-gap: 5vh;
                 color: #172144;
