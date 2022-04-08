@@ -354,6 +354,7 @@ blockquote, button {
             display: flex;
             gap: 5vw;
             &-link {
+                color: #4F75E2;
                 &:visited {color: #4F75E2;}
                 &:hover {color: #1a4cd4;}
             }
