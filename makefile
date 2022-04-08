@@ -19,5 +19,6 @@ local:
 	@
 	@ # Compile scss file
 	@ sass $(SERVER_PATH)/main.scss $(SERVER_PATH)/main.css
+	@ echo -e "[${CL_GREEN}OK${CL_RESET}] SCSS file compiled"
 	@
 	@ echo -e "[${CL_GREEN}OK${CL_RESET}] Done! http://localhost"
